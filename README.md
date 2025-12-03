@@ -49,13 +49,13 @@ Tất cả code đều thuần Python, không dùng thư viện BDD ngoài (BDD 
 
 
 # Cách chạy kiểm tra toàn bộ bài tập
-	- Mở thư mục " " bằng VSCode
+	- Mở thư mục "Assignment-CO2011-CSE251-{2413534-2413656-2413749-2414037-2414013}" bằng VSCode
 	- Gõ trên Temirnal lệnh "python main.py <tên file PNML>.pnml"
 	    Một vài file PNML mẫu để kiểm tra gồm:
 	    - test1
 	    - test2
 	    - test3
-	Nếu không truyền file, chương trình mặc định dùng test.xml.
+	Nếu không truyền file, chương trình mặc định dùng test.pnml.
 
 	File main.py thực hiện toàn bộ:
 	- Task 1 → Đọc PNML
@@ -109,8 +109,8 @@ Dưới đây là toàn bộ các task được yêu cầu trong bài tập này
             target = arcNode.get('target')
 
     ## 3. Cách chạy
-	- Mở thư mục " " bằng VSCode
-	- Gõ trên Temirnal lệnh "py task1.py <tên file PNML>.pnml"
+	- Mở thư mục "Assignment-CO2011-CSE251-{2413534-2413656-2413749-2414037-2414013}" bằng VSCode
+	- Gõ trên Temirnal lệnh "python task1.py <tên file PNML>.pnml"
 	    Một vài file PNML mẫu để kiểm tra gồm:
 	    - test1
 	    - test2
@@ -155,8 +155,8 @@ Dưới đây là toàn bộ các task được yêu cầu trong bài tập này
     			queue.append(mAfter)
 
     ## 3. Cách chạy
-	- Mở thư mục " " bằng VSCode
-	- Gõ trên Temirnal lệnh "py task2.py <tên file PNML>.pnml"
+	- Mở thư mục "Assignment-CO2011-CSE251-{2413534-2413656-2413749-2414037-2414013}" bằng VSCode
+	- Gõ trên Temirnal lệnh "python task2.py <tên file PNML>.pnml"
 		Một vài file PNML mẫu để kiểm tra gồm:
 		- test1 
 		- test2
@@ -251,8 +251,8 @@ Dưới đây là toàn bộ các task được yêu cầu trong bài tập này
 	- So sánh hiệu suất
 
 	## 8. Cách chạy
-	- Mở thư mục " " bằng VSCode
-	- Gõ trên Temirnal lệnh "py task3.py <tên file PNML>.pnml"
+	- Mở thư mục "Assignment-CO2011-CSE251-{2413534-2413656-2413749-2414037-2414013}" bằng VSCode
+	- Gõ trên Temirnal lệnh "python task3.py <tên file PNML>.pnml"
 	    Một vài file PNML mẫu để kiểm tra gồm:
 	    - test1
 	    - test2
@@ -286,8 +286,8 @@ Dưới đây là toàn bộ các task được yêu cầu trong bài tập này
 	bdd_net.bitmask_to_marking(deadlock_mask)
 
 	## 3. Cách chạy
-	- Mở thư mục " " bằng VSCode
-	- Gõ trên Temirnal lệnh "py task4.py <tên file PNML>.pnml"
+	- Mở thư mục "Assignment-CO2011-CSE251-{2413534-2413656-2413749-2414037-2414013}" bằng VSCode
+	- Gõ trên Temirnal lệnh "python task4.py <tên file PNML>.pnml"
 	    Một vài file PNML mẫu để kiểm tra gồm:
 	    - test1
 	    - test2
@@ -340,8 +340,8 @@ Dưới đây là toàn bộ các task được yêu cầu trong bài tập này
 		- Hàm mục tiêu sum(c_p * M_p): tìm marking “tốt nhất” theo vector trọng số
 
 	## 3. Cách chạy
-	- Mở thư mục " " bằng VSCode
-	- Gõ trên Temirnal lệnh "py task5.py <tên file PNML>.pnml"
+	- Mở thư mục "Assignment-CO2011-CSE251-{2413534-2413656-2413749-2414037-2414013}" bằng VSCode
+	- Gõ trên Temirnal lệnh "python task5.py <tên file PNML>.pnml"
 	    Một vài file PNML mẫu để kiểm tra gồm gồm:
 	    - test1
 	    - test2
