@@ -1,3 +1,23 @@
+# Hướng dẫn cài thư viện trên python được sử dụng trong bài tập này
+	## 1. Thư viện pulp
+	Dùng trong Task 4 (ILP Deadlock) và Task 5 (ILP Optimization) để giải mô hình tối ưu hoá.
+	Cách cài: 
+		Gõ trên Terminal lệnh: "pip install pulp" để cài đặt
+
+	## 2. Thư viện matplotlib
+	Dùng trong Task 3 để:
+	- Vẽ biểu đồ so sánh hiệu năng (BDD vs Explicit)
+	- Lưu biểu đồ ra file .png
+	Cách cài:
+		Gõ trên Terminal lệnh: "pip install matplotlib" để cài đặt
+
+	## 3. Thư viện psutil
+	Dùng trong Task 3 để đo:
+	- Lượng bộ nhớ tiêu thụ (memory usage)
+	- Thông tin tiến trình
+	Cách cài:
+		Gõ trên Terminal lệnh: "pip install psutil" để cài đặt
+	
 # Task 1 – Reading Petri nets from PNML files
 
 	## 1. Mục tiêu
@@ -36,7 +56,7 @@
     ## 3. Cách chạy
 	- Mở thư mục " " bằng VSCode
 	- Gõ trên Temirnal lệnh "py task1.py <tên file PNML>.pnml"
-	    Tên file PNML mẫu gồm:
+	    Một vài file PNML mẫu để kiểm tra gồm:
 	    - test1
 	    - test2
 	    - test3
@@ -82,7 +102,7 @@
     ## 3. Cách chạy
 	- Mở thư mục " " bằng VSCode
 	- Gõ trên Temirnal lệnh "py task2.py <tên file PNML>.pnml"
-		Tên file PNML mẫu gồm:
+		Một vài file PNML mẫu để kiểm tra gồm:
 		- test1 
 		- test2
 		- test3
@@ -178,7 +198,7 @@
 	## 8. Cách chạy
 	- Mở thư mục " " bằng VSCode
 	- Gõ trên Temirnal lệnh "py task3.py <tên file PNML>.pnml"
-	    Tên file PNML mẫu gồm:
+	    Một vài file PNML mẫu để kiểm tra gồm:
 	    - test1
 	    - test2
 	    - test3
@@ -213,7 +233,7 @@
 	## 3. Cách chạy
 	- Mở thư mục " " bằng VSCode
 	- Gõ trên Temirnal lệnh "py task4.py <tên file PNML>.pnml"
-	    Tên file PNML mẫu gồm:
+	    Một vài file PNML mẫu để kiểm tra gồm:
 	    - test1
 	    - test2
 	    - test3
@@ -267,7 +287,7 @@
 	## 3. Cách chạy
 	- Mở thư mục " " bằng VSCode
 	- Gõ trên Temirnal lệnh "py task5.py <tên file PNML>.pnml"
-	    Tên file PNML mẫu gồm:
+	    Một vài file PNML mẫu để kiểm tra gồm gồm:
 	    - test1
 	    - test2
 	    - test3
