@@ -33,7 +33,7 @@ Bài làm gồm 5 task tương ứng với yêu cầu đề tài.
 Tất cả code đều thuần Python, không dùng thư viện BDD ngoài (BDD được mô phỏng bằng bitmask).
 
 # Cấu trúc dự án gồm:
-	BTL_MHH/
+	Assignment-CO2011-CSE251-{2413534-2413656-2413749-2414037-2414013}/
 	│
 	├── task1.py        # Đọc file PNML, trích xuất Places / Transitions / Marking
 	├── task2.py        # Explicit BFS Reachability
