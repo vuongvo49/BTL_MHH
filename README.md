@@ -32,19 +32,21 @@
 Bài làm gồm 5 task tương ứng với yêu cầu đề tài.
 Tất cả code đều thuần Python, không dùng thư viện BDD ngoài (BDD được mô phỏng bằng bitmask).
 
-Cấu trúc dự án gồm:
-Assignment-CO2011-CSE251-{2413534-2413656-2413749-2414037-2414013}
-task1.py        # Đọc file PNML, trích xuất Places / Transitions / Marking
-task2.py        # Explicit BFS Reachability
-task3.py        # Symbolic Reachability bằng Bitmask (BDD style)
-task4.py        # Deadlock Detection
-task5.py        # ILP Optimization
-main.py         # File chạy toàn bộ các task
-test1.pnml      # Các mô hình mẫu
-test2.pnml
-test3.pnml
-test.xml		# File test mặc định 
-README.md
+# Cấu trúc dự án gồm:
+	BTL_MHH/
+	│
+	├── task1.py        # Đọc file PNML, trích xuất Places / Transitions / Marking
+	├── task2.py        # Explicit BFS Reachability
+	├── task3.py        # Symbolic Reachability bằng Bitmask (BDD style)
+	├── task4.py        # Deadlock Detection
+	├── task5.py        # ILP Optimization
+	├── main.py         # File chạy toàn bộ các task
+	├── test1.pnml      # Các mô hình mẫu
+	├── test2.pnml
+	├── test3.pnml
+	├── test.pnml		#File test mặc định 
+	└── README.md
+
 
 # Cách chạy kiểm tra toàn bộ bài tập
 	- Mở thư mục " " bằng VSCode
