@@ -17,6 +17,21 @@
 	- Thông tin tiến trình
 	Cách cài:
 		Gõ trên Terminal lệnh: "pip install psutil" để cài đặt
+
+# Symbolic and Algebraic Reasoning in Petri Nets
+	📌 Giới thiệu Bài Tập Lớn
+	Đây là Bài tập lớn của môn Mô hình hóa và kiểm chứng hệ thống (Modeling and Verification).
+	Mục tiêu của bài tập:
+	- Đọc và phân tích mô hình Petri Net từ file PNML
+	- Sinh toàn bộ không gian reachable bằng:
+		- Phương pháp tường minh Explicit BFS
+		- Phương pháp tượng trưng Symbolic bằng Bitmask (BDD-like)
+	- So sánh hiệu năng của 2 cách tiếp cận
+	- Phát hiện Deadlock trên hệ thống
+	- Giải bài toán tối ưu hóa ILP trên tập reachable markings
+
+Bài làm gồm 5 task tương ứng với yêu cầu đề tài.
+Tất cả code đều thuần Python, không dùng thư viện BDD ngoài (BDD được mô phỏng bằng bitmask).
 	
 # Task 1 – Reading Petri nets from PNML files
 
