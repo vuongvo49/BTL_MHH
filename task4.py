@@ -7,7 +7,7 @@ def check_deadlock_constraints(bdd_net: BDDPetriNet):
     đã được tính toán ở Task 3.
     """
     print("\n" + "="*70)
-    print("💀 TASK 4: ILP + BDD DEADLOCK DETECTION")
+    print("TASK 4: ILP + BDD DEADLOCK DETECTION")
     print("="*70)
 
     start_time = time.time()
@@ -17,14 +17,14 @@ def check_deadlock_constraints(bdd_net: BDDPetriNet):
     try:
         reachable_states = bdd_net.reachable_states
     except AttributeError:
-        print("⚠️  LỖI: Không tìm thấy biến reachable_states trong bdd_net.")
+        print("LỖI: Không tìm thấy biến reachable_states trong bdd_net.")
         return False, None
     
     if not reachable_states:
-        print("⚠️  Cảnh báo: Tập Reachable rỗng. Hãy kiểm tra lại Task 3.")
+        print("Cảnh báo: Tập Reachable rỗng. Hãy kiểm tra lại Task 3.")
         return False, None
 
-    print(f"🔍 Đang kiểm tra ràng buộc Deadlock trên {len(reachable_states):,} trạng thái...")
+    print(f"Đang kiểm tra ràng buộc Deadlock trên {len(reachable_states):,} trạng thái...")
     
     deadlock_mask = None
     deadlock_found = False
@@ -52,13 +52,13 @@ def check_deadlock_constraints(bdd_net: BDDPetriNet):
     if deadlock_found:
         # Giải mã từ số nguyên bitmask sang tên Place để in ra
         deadlock_marking = bdd_net.bitmask_to_marking(deadlock_mask)
-        print(f"❌ PHÁT HIỆN DEADLOCK!")
-        print(f"   ⏱️  Thời gian: {elapsed:.4f}s")
-        print(f"   📍 Tại trạng thái: {list(deadlock_marking)}")
+        print(f"PHÁT HIỆN DEADLOCK!")
+        print(f"    Thời gian: {elapsed:.4f}s")
+        print(f"    Tại trạng thái: {list(deadlock_marking)}")
         return True, deadlock_marking
     else:
-        print(f"✅ KHÔNG CÓ DEADLOCK.")
-        print(f"   ⏱️  Thời gian: {elapsed:.4f}s")
+        print(f"KHÔNG CÓ DEADLOCK.")
+        print(f"    Thời gian: {elapsed:.4f}s")
         return False, None
 
 
@@ -69,25 +69,25 @@ from task1 import PetriNet
 if __name__ == "__main__":
     if len(sys.argv) < 2:
         print("Cách dùng: python task4.py <tên_file_pnml>")
-        # Mặc định thử với test.xml nếu không nhập gì
-        filename = "test.xml"
+        # Mặc định thử với test.pnml nếu không nhập gì
+        filename = "test.pnml"
     else:
         filename = sys.argv[1]
 
     import os
     if os.path.exists(filename):
-        print(f"🚀 [Standalone Mode] Đang test riêng Task 4 với file: {filename}")
+        print(f"[Standalone Mode] Đang test riêng Task 4 với file: {filename}")
         
-        # 1. Task 1 để đọc file
+        # 1. Phải chạy Task 1 để đọc file
         net = PetriNet()
         net.read_PNML(filename)
         
-        # 2. Task 3 để có Reachability
+        # 2. Phải chạy Task 3 để có Reachability
         bdd_net = BDDPetriNet(net)
         print(">> Đang chạy Reachability (Task 3)...")
         bdd_net.symbolic_reachability()
         
-        # 3. Chạy hàm 
+        # 3. Chạy hàm của bạn
         check_deadlock_constraints(bdd_net)
     else:
-        print(f"❌ Không tìm thấy file: {filename}")
+        print(f"Không tìm thấy file: {filename}")
