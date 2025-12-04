@@ -232,7 +232,7 @@ Dưới đây là toàn bộ các task được yêu cầu trong bài tập này
 	----------------------------------------------------------------------
 	Explicit BFS       0.007  s 128       6.2       KB
 	Symbolic BDD       0.004  s 128       1.0       KB 1.67x
-	✅ VERIFICATION PASSED: Both found 128 reachable markings
+	VERIFICATION PASSED: Both found 128 reachable markings
 
 	## 6. Vẽ biểu đồ:
 	Chương trình sinh ra file bdd_vs_explicit_comparison.png
@@ -301,12 +301,12 @@ Dưới đây là toàn bộ các task được yêu cầu trong bài tập này
 
 	Ví dụ:
 	======================================================================
-	💀 TASK 4: ILP + BDD DEADLOCK DETECTION
+	TASK 4: ILP + BDD DEADLOCK DETECTION
 	======================================================================
-	🔍 Đang kiểm tra ràng buộc Deadlock trên 1,946 trạng thái...
-	❌ PHÁT HIỆN DEADLOCK!
-   		⏱️  Thời gian: 0.0007s
-   		📍 Tại trạng thái: ['p1', 'p_dead']
+	Đang kiểm tra ràng buộc Deadlock trên 1,946 trạng thái...
+	PHÁT HIỆN DEADLOCK!
+   		Thời gian: 0.0007s
+   		Tại trạng thái: ['p1', 'p_dead']
 
 # Task 5: Optimization over reachable markings
 	## 1. Mục tiêu:
