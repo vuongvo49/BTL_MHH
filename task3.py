@@ -73,7 +73,7 @@ class BDDPetriNet:
     
     def symbolic_reachability(self) -> tuple:
         """Thuật toán reachability tượng trưng sử dụng bitmask sets"""
-        print("🔍 Starting SYMBOLIC (BDD-like) reachability analysis...")
+        print("Starting SYMBOLIC (BDD-like) reachability analysis...")
         start_time = time.time()
         
         # Trạng thái ban đầu
@@ -93,10 +93,10 @@ class BDDPetriNet:
                         if new_bitmask not in reachable:
                             new_states.add(new_bitmask)
             
-            print(f"  Iteration {iteration}: |R| = {len(reachable):,}, New = {len(new_states):,}")
+            print(f"Iteration {iteration}: |R| = {len(reachable):,}, New = {len(new_states):,}")
             
             if not new_states:
-                print(f"  ✅ Fixed point reached at iteration {iteration}")
+                print(f"Fixed point reached at iteration {iteration}")
                 break
             
             reachable.update(new_states)
@@ -116,7 +116,7 @@ class BDDPetriNet:
             'max_bitmask': max(reachable) if reachable else 0
         }
         
-        print(f"✅ Symbolic Reachability completed!")
+        print(f"   Symbolic Reachability completed!")
         print(f"   Time: {elapsed:.3f}s")
         print(f"   Bitmask States: {len(reachable):,}")
         print(f"   Markings: {len(reachable_markings):,}")
@@ -141,7 +141,7 @@ class BDDPetriNet:
         bdd_memory_kb = self.bdd_stats['memory_bytes'] / 1024
         
         print("\n" + "="*70)
-        print("📊 PERFORMANCE COMPARISON")
+        print(" PERFORMANCE COMPARISON")
         print("="*70)
         print(f"{'Method':<18} {'Time':<8} {'States':<10} {'Memory':<12} {'Speedup':<10}")
         print("-"*70)
@@ -150,9 +150,9 @@ class BDDPetriNet:
         
         # Verification
         if explicit_count == bdd_count:
-            print(f"✅ VERIFICATION PASSED: Both found {explicit_count:,} reachable markings")
+            print(f" VERIFICATION PASSED: Both found {explicit_count:,} reachable markings")
         else:
-            print(f"⚠️  VERIFICATION FAILED: Explicit={explicit_count}, BDD={bdd_count}")
+            print(f"  VERIFICATION FAILED: Explicit={explicit_count}, BDD={bdd_count}")
         
         memory_ratio = explicit_memory_kb / bdd_memory_kb if bdd_memory_kb > 0 else 0
         
@@ -233,18 +233,18 @@ def main(filename: str):
     5. Vẽ biểu đồ
     6. Lưu kết quả
     """
-    print("🎯 TASK 3: SYMBOLIC BDD REACHABILITY ANALYSIS")
+    print(" TASK 3: SYMBOLIC BDD REACHABILITY ANALYSIS")
     print("="*70)
     
     # Bước 1: Load Petri Net
     print("\n1️⃣ Đọc Petri Net từ file PNML...")
     net = PetriNet()
     if not net.read_PNML(filename):
-        print("❌ Không thể đọc file PNML!")
+        print(" Không thể đọc file PNML!")
         return
     
-    print(f"   📊 {len(net.places)} Places, {len(net.transitions)} Transitions")
-    print(f"   🎯 Marking ban đầu: {sorted(list(net.initial_marking))}")
+    print(f"    {len(net.places)} Places, {len(net.transitions)} Transitions")
+    print(f"    Marking ban đầu: {sorted(list(net.initial_marking))}")
     
     # Bước 2: Reachability explicit
     print("\n2️⃣ Tính REACHABILITY EXPLICIT...")
@@ -252,9 +252,9 @@ def main(filename: str):
     explicit_visited, explicit_edges = bfs(net)
     explicit_time = time.time() - explicit_start
     
-    print(f"   ⏱️  Thời gian: {explicit_time:.3f}s")
-    print(f"   📊 {len(explicit_visited):,} markings có thể đạt được")
-    print(f"   🔗 {len(explicit_edges):,} transitions")
+    print(f"     Thời gian: {explicit_time:.3f}s")
+    print(f"    {len(explicit_visited):,} markings có thể đạt được")
+    print(f"    {len(explicit_edges):,} transitions")
     
     # Bước 3: Reachability symbolic BDD
     print("\n3️⃣ Tính REACHABILITY SYMBOLIC BDD...")
@@ -291,11 +291,11 @@ def main(filename: str):
     
     # Tóm tắt cuối
     print("\n" + "="*70)
-    print("🎉 TASK 3 HOÀN THÀNH THÀNH CÔNG! 🎉")
+    print("TASK 3 HOÀN THÀNH THÀNH CÔNG! ")
     print("="*70)
-    print(f"📁 Kết quả đã lưu: reachability_results.pkl")
-    print(f"📊 Biểu đồ đã lưu: bdd_vs_explicit_comparison.png")
-    print(f"✅ Tổng số markings có thể đạt được: {len(explicit_visited):,}")
+    print(f" Kết quả đã lưu: reachability_results.pkl")
+    print(f" Biểu đồ đã lưu: bdd_vs_explicit_comparison.png")
+    print(f" Tổng số markings có thể đạt được: {len(explicit_visited):,}")
     return results
 
 if __name__ == "__main__":
@@ -306,7 +306,7 @@ if __name__ == "__main__":
     
     filename = sys.argv[1]
     if not os.path.exists(filename):
-        print(f"❌ Không tìm thấy file: {filename}")
+        print(f"Không tìm thấy file: {filename}")
         sys.exit(1)
     
     main(filename)
